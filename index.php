@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Blog de Videjuegos</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	</head>
 	<body>
 		<!--CABECERA-->
@@ -100,9 +101,10 @@
 			</div>	
 		</div>	
 
-		<!--BARRA LATERAL-->
-		<!--CAJA PRINCIPAL-->
 		<!--PIE DE PAGINA-->
+		<footer id="pie">
+			<p>Desarrollado por Javier-dev &copy; 2019<p>
+		</footer>
 	</body>
 
 </html>
