@@ -12,15 +12,46 @@
 	font-family: sans-serif,Helvetica,Arial;
 	text-decoration: none;
 }
-body{
-
-	background:url(../img/cubes.png) #F4f4f4; 
-
-}
 
 .clearfix{
 	clear: both;
 	float: none;
+}
+
+body{
+
+	background:url(../img/cubes.png) #F4f4f4; 
+}
+
+/*CABECERA*/
+#cabecera{
+	width: 85%;
+	height: auto;
+	background:transparent;
+	margin: 0px auto;
+	border: 1px solid black;
+
+}
+
+#logo{
+	float:left;
+	width: 540px;
+	height: 140px;
+}
+
+#logo a{
+	font-family: "fajala",Helvetica;
+	font-size: 40px;
+	letter-spacing: 2px;
+	color: #2979CD;
+	text-shadow: 0px 0px 0px black, 1px 1px 0px black, 2px 2px 0px black;
+	transition: all 500ms;
+}
+
+#logo a:hover{
+	cursor: pointer;
+	text-shadow: 0px 0px 0px black, -1px -1px 0px black, -2px -2px 0px black;
+
 }
 
 #menu{
