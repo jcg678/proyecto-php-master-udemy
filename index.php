@@ -1,6 +1,5 @@
 <?php require_once 'includes/cabecera.php'; ?>
-		<div id="contenedor">
-			<?php require_once 'includes/lateral.php'; ?>
+<?php require_once 'includes/lateral.php'; ?>
 			<!--CAJA PRINCIPAL-->
 			<div id="principal">
 				<h1>Últimas Entradas</h1>
@@ -39,6 +38,4 @@
 				<div id="ver-todas"><a href="">Ver Todas  las entradas</a></div>												
 			</div>	
 			
-			<div class="clearfix"></div>
-		</div><!-- fin contenedor -->	
 <?php require_once 'includes/pie.php' ?>
