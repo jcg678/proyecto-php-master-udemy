@@ -68,7 +68,7 @@
 						<input type="email" name="email">
 						<label for="password">Password</label>
 						<input type="password" name="password">
-						<input type="submit" name="Registrar">		
+						<input type="submit" name="Registrar" value="Registrar">		
 					</form>
 				</div>
 			</aside>
