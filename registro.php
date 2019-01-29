@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if(isset($_POST)){
 	//Recoger los valores del formulario
 	$nombre = isset($_POST['nombre'])? $_POST['nombre'] : false;
@@ -42,7 +42,10 @@ if(isset($_POST)){
 	$guardar_usuario = false;
 	if(count($errores) == 0){
 		//insertar usuario
-		guardar_usuario = true;
+		$guardar_usuario = true;
+	}else{
+		$_SESSION['errores'] = $errores;
+		header('Location: index.php');
 	}
 
 }	
