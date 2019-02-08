@@ -13,8 +13,12 @@
 				<form action="guardar-entrada.php" method="POST">
 					<label for="titulo">Titulo de la entrada:</label>
 					<input type="text" name="titulo" />
+					<?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'titulo') : ""; ?>	
+
 					<label for="descripcion">Descripción de la entrada:</label>
 					<textarea type="text" name="descripcion" /></textarea>
+					<?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'descripcion') : ""; ?>
+
 					<label for="categoria">Categoria:</label>
 					<select name="categoria">
 						<?php echo 'ok';
@@ -30,9 +34,10 @@
 							endif;
 						?>
 					</select>
-
+					<?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'categoria') : ""; ?>
 					<input type="submit" value="Guardar Entrada" >	
 				</form>	
+				<?php borrarErrores(); ?>
 			</div>	
 			
 <?php require_once 'includes/pie.php' ?>
