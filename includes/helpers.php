@@ -47,9 +47,23 @@ function conseguirCategorias($conexion){
 function conseguirCategoria($conexion ,$id){
 	$sql = "SELECT * FROM CATEGORIAS WHERE id = $id";
 	$categorias = mysqli_query($conexion , $sql);
-	$return = array();
+	$resultado = array();
 	if($categorias && mysqli_num_rows($categorias)>= 1){
 		$resultado = mysqli_fetch_assoc($categorias);
+	}
+
+	return $resultado;
+}
+
+
+function conseguirEntrada($conexion ,$id){
+	$sql = "SELECT e.*, c.nombre as 'categoria' FROM entradas as e".
+			" INNER JOIN categorias c ON e.categoria_id = c.id".
+			" WHERE e.id = $id"; 
+	$entrada = mysqli_query($conexion , $sql);
+	$resultado = array();
+	if($entrada && mysqli_num_rows($entrada)>= 1){
+		$resultado = mysqli_fetch_assoc($entrada);
 	}
 
 	return $resultado;
