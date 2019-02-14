@@ -57,8 +57,9 @@ function conseguirCategoria($conexion ,$id){
 
 
 function conseguirEntrada($conexion ,$id){
-	$sql = "SELECT e.*, c.nombre as 'categoria' FROM entradas as e".
+	$sql = "SELECT e.*, c.nombre as 'categoria', CONCAT(u.nombre, ' ',u.apellidos) AS 'usuario' FROM entradas as e".
 			" INNER JOIN categorias c ON e.categoria_id = c.id".
+			" INNER JOIN usuarios u ON e.usuario_id = u.id".
 			" WHERE e.id = $id"; 
 	$entrada = mysqli_query($conexion , $sql);
 	$resultado = array();

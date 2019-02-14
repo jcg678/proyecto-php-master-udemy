@@ -180,6 +180,7 @@ input[type="submit"],
 }
 
 .boton{
+	color:white!important;	
 	width: 130px;
 	text-align: center;
 }
@@ -194,7 +195,7 @@ input[type="submit"],
 	border-color: green;
 }
 
-.boton-rojo{
+.boton-rojo{	
 	background: red;
 	border-color: #444;
 }
